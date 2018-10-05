@@ -1,2 +1,2 @@
 # chisel-client
-jpillora/chisel client plugin for Aghape Framework
+http://github.com/jpillora/chisel client plugin for Aghape Framework 
