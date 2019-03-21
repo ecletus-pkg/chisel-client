@@ -1,5 +1,5 @@
 # tunnel
-https://github.com/mmatczuk/go-http-tunnel plugin for Aghape Framework
+https://github.com/mmatczuk/go-http-tunnel plugin for Ecletus Framework
 
 ## Usage
 
@@ -43,7 +43,7 @@ Options:
 ### Register Plugin
 
 ```go
-import "github.com/aghape-pkg/tunnel"
+import "github.com/ecletus-pkg/tunnel"
 
 // ...
 plugins = plugins.append(plugins, &tunnel.Plugin{ConfigDirKey: CONFIG_DIR, RouterKey: ROUTER})

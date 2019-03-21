@@ -19,15 +19,15 @@ import (
 
 	"github.com/moisespsena/go-assetfs/api"
 
-	"github.com/aghape/router"
+	"github.com/ecletus/router"
 	"github.com/mmatczuk/go-http-tunnel/cli/tunnel"
 	"github.com/moisespsena/go-default-logger"
 	"github.com/moisespsena/go-error-wrap"
 	"github.com/moisespsena/go-path-helpers"
 
-	"github.com/aghape/aghape"
-	"github.com/aghape/cli"
-	"github.com/aghape/plug"
+	"github.com/ecletus/ecletus"
+	"github.com/ecletus/cli"
+	"github.com/ecletus/plug"
 	"github.com/spf13/cobra"
 )
 
@@ -172,7 +172,7 @@ func CreateCommand(fs assetfsapi.Interface, cfg *Config) *cobra.Command {
 	return cmd
 }
 
-func LoadConfig(configDir *aghape.ConfigDir) (cfg *Config, err error) {
+func LoadConfig(configDir *ecletus.ConfigDir) (cfg *Config, err error) {
 	cfg = &Config{Main: &MainConfig{}}
 	if tunnelConfig, err := tunnel.LoadClientConfigFromFile(configDir.Path(TUNNEL_CONFIG_FILE)); err != nil {
 		return nil, errwrap.Wrap(err, "Load config file %q", TUNNEL_CONFIG_FILE)
@@ -219,7 +219,7 @@ func (p *Plugin) Init(options *plug.Options) {
 		if srv.Addr != "" {
 			r.PreServe(func(r *router.Router, ta task.Appender) {
 				var (
-					agp = options.GetInterface(aghape.AGHAPE).(*aghape.Aghape)
+					agp = options.GetInterface(ecletus.AGHAPE).(*ecletus.Ecletus)
 				)
 
 				if p.cmd != nil {
@@ -239,7 +239,7 @@ func (p *Plugin) Init(options *plug.Options) {
 }
 
 func (p *Plugin) loadConfig(options *plug.Options) (cfg *Config) {
-	configDir := options.GetInterface(p.ConfigDirKey).(*aghape.ConfigDir)
+	configDir := options.GetInterface(p.ConfigDirKey).(*ecletus.ConfigDir)
 	if ok, err := configDir.Exists(TUNNEL_CONFIG_FILE); err != nil {
 		log.Error(errwrap.Wrap(err, "Stat of %q", configDir.Path(TUNNEL_CONFIG_FILE)))
 		return nil
