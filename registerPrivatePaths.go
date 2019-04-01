@@ -11,7 +11,7 @@ import (
 
 	"github.com/moisespsena/go-error-wrap"
 
-	"github.com/moisespsena/go-path-helpers"
+	"github.com/moisespsena-go/path-helpers"
 )
 
 func (p *Plugin) registerPrivatePaths() {
