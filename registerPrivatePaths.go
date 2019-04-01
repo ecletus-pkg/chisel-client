@@ -9,7 +9,7 @@ import (
 
 	"github.com/moisespsena-go/env-utils"
 
-	"github.com/moisespsena/go-error-wrap"
+	"github.com/moisespsena-go/error-wrap"
 
 	"github.com/moisespsena-go/path-helpers"
 )

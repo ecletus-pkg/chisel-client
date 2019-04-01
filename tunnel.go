@@ -22,7 +22,7 @@ import (
 	"github.com/ecletus/router"
 	"github.com/mmatczuk/go-http-tunnel/cli/tunnel"
 	"github.com/moisespsena-go/default-logger"
-	"github.com/moisespsena/go-error-wrap"
+	"github.com/moisespsena-go/error-wrap"
 	"github.com/moisespsena-go/path-helpers"
 
 	"github.com/ecletus/ecletus"
