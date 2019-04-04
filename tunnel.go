@@ -2,7 +2,7 @@ package tunnel
 
 import (
 	"fmt"
-	"github.com/moisespsena/go-assetfs/assetfsapi"
+	"github.com/moisespsena-go/assetfs/assetfsapi"
 	"io"
 	"io/ioutil"
 	"os"
@@ -12,12 +12,12 @@ import (
 
 	"github.com/moisespsena-go/task"
 
-	"github.com/moisespsena/go-assetfs"
+	"github.com/moisespsena-go/assetfs"
 	"gopkg.in/yaml.v2"
 
-	"github.com/moisespsena/go-pluggable"
+	"github.com/moisespsena-go/pluggable"
 
-	"github.com/moisespsena/go-assetfs/api"
+	"github.com/moisespsena-go/assetfs/api"
 
 	"github.com/ecletus/router"
 	"github.com/mmatczuk/go-http-tunnel/cli/tunnel"
